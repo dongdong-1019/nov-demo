@@ -59,8 +59,14 @@
                 img = document.createElement('img')
 
                 if(hash[row[index2]]){
-                img.src ='http://'+hash[row[index2]]+'/favicon.ico'
-                }     
+                    img.src ='http://'+hash[row[index2]]+'/favicon.ico'
+                } 
+                else{
+                    img.src = '//i.loli.net/2017/11/10/5a05afbc5e183.png'
+                }
+                img.noerror = function(xxx){
+                    xxx.target.src = '//i.loli.net/2017/11/10/5a05afbc5e183.png'
+                }
                 button.onclick = function(suibian){
                     key = suibian['target']['id'] //  qw  er t
                     x = prompt('给我一个网址')// qq.com
